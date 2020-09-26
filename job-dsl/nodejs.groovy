@@ -3,6 +3,7 @@ job('NodeJS example') {
         git('git://github.com/wardviaene/docker-demo.git') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('DSL User')
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
+            Dpermissive-script-security.enabled=true
         }
     }
     triggers {
